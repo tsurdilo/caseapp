@@ -21,6 +21,10 @@ mvn archetype:generate
    -DartifactId=demo-app 
    -DarchetypeCatalog=local
 ```
+or use this one-liner
+```
+mvn archetype:generate -DarchetypeGroupId=org.jbpm.apps -DarchetypeArtifactId=caseapp-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=org.jbpm.demo.apps -DartifactId=demo-app -DarchetypeCatalog=local
+```
 5. Change the prompted values during the generation as needed (or leave the defaults)
 6. Compile your generated case app with 
 ```
