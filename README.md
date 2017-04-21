@@ -23,19 +23,20 @@ mvn archetype:generate
 ```
 5. Change the prompted values during the generation as needed (or leave the defaults)
 6. Compile your generated case app with 
-...
+```
 mvn clean install
-...
+```
 7. Go to your demo apps *-web* directory (for example /demo-app/demo-app-web)
 8. Run your demo app with:
-...
+```
 java -Dorg.kie.server.location=http://localhost:8080/rest/server -jar target/demo-app-web-1.0-SNAPSHOT-swarm.jar
-...
+```
 (make sure you change the jar name here to match the name of the jar of your case app name)
+
 9. Access your app via
-...
+```
 http://localhost:8080
-...
+```
 
 How to logon
 ----------------
