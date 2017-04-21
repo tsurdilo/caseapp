@@ -36,8 +36,8 @@
         </fileSet>
         <fileSet filtered="true"  encoding="UTF-8">
           <directory>src/main/resources/modules</directory>
-        </fileSet>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+        </fileSet>        
+        <fileSet filtered="false" encoding="UTF-8">
           <directory>src/main/webapp</directory>
         </fileSet>
       </fileSets>

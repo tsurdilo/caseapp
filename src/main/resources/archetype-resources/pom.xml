@@ -6,14 +6,14 @@
   <packaging>pom</packaging>
 
   <properties>
-    <version.wildfly-swarm>2017.2.0</version.wildfly-swarm>
+    <version.wildfly-swarm>2017.4.0</version.wildfly-swarm>
     <version.org.kie>7.0.0-SNAPSHOT</version.org.kie>
 
     <version.h2>1.4.187</version.h2>
     <version.postgresql>9.4.1207</version.postgresql>
     <version.mysql>5.1.38</version.mysql>
 
-    <version.org.hibernate>5.0.9.Final</version.org.hibernate>
+    <version.org.hibernate>5.1.4.Final</version.org.hibernate>
 
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>

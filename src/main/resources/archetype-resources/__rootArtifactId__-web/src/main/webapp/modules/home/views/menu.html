@@ -1,0 +1,48 @@
+﻿<nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+      <strong class="navbar-brand">Case application >> {{ Page.title() }} </strong>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-5">
+    <ul class="nav navbar-nav navbar-utility">
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          {{globals.currentUser.username}} ( {{globals.currentUser.role}} )
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#/login">Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary">
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+          Cases
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#/listcasesdefs">Case definitions</a>
+          </li>
+        </ul>
+      </li>     
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+          Tools
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#/processinstancediagrams">Process Instance Diagrams</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#/">Home</a>
+      </li>
+    </ul>
+  </div>
+</nav>

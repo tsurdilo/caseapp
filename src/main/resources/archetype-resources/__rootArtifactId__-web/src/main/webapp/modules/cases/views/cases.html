@@ -1,0 +1,51 @@
+<header ng-include src="'modules/home/views/menu.html'"></header>
+<div class="container-fluid">
+<div class="row toolbar-pf">
+  <div class="col-sm-12">
+      <div class="row toolbar-pf-results">
+        <div class="col-sm-12">
+          <h5>{{cases.length}} Results</h5>
+          <p>Active filters:</p>
+          <ul class="list-inline">
+            <li>
+              <span class="label label-info">
+                Name: nameofthething
+                <a href="#"><span class="pficon pficon-close"></span></a>
+              </span>
+            </li>
+          </ul>
+          <p><a href="#">Clear All Filters</a></p>
+        </div><!-- /col -->
+      </div><!-- /row -->
+  </div><!-- /col -->
+</div><!-- /row -->
+</div><!-- /container -->
+  <div class="list-group list-view-pf list-view-pf-view">
+    <div class="list-group-item" ng-repeat="case in cases">
+      <div class="list-view-pf-actions">
+        <button class="btn btn-default">Start</button>
+        <div class="dropdown pull-right dropdown-kebab-pf">
+          <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight14" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="true">
+          </button>
+        </div>
+
+      </div>
+      <div class="list-view-pf-main-info">
+        <div class="list-view-pf-left">
+          <span class="glyphicon glyphicon-list"></span>
+        </div>
+        <div class="list-view-pf-body">
+          <div class="list-view-pf-description">
+            <div class="list-group-item-heading">
+              {{ case['name'] }} (case definition id {{ case['id'] }})
+            </div>
+            <div class="list-group-item-text">
+              Case project <b>{{ case['container-id'] }}</b> case instances will be prefixed with {{ case['case-id-prefix'] }}.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

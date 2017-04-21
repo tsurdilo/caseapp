@@ -17,7 +17,7 @@
       <url-pattern>/rest/*</url-pattern>
     </web-resource-collection>
     <auth-constraint>
-      <role-name>employees</role-name>
+      <role-name>users</role-name>
     </auth-constraint>
   </security-constraint>
   <login-config>
@@ -25,7 +25,7 @@
     <realm-name>KIE Server</realm-name>
   </login-config>
   <security-role>
-    <role-name>employees</role-name>
+    <role-name>users</role-name>
   </security-role>
 
 </web-app>

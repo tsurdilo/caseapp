@@ -25,11 +25,11 @@ import org.wildfly.swarm.transactions.TransactionsFraction;
 public class KieServerMain {
 
     private static String configFolder = System.getProperty("org.kie.server.swarm.conf", "src/main/config");
-    private static String SERVER_ID = "itorders";
+    private static String SERVER_ID = "${rootArtifactId}";
 
-    private static String GROUP_ID = "org.jbpm.demo.apps";
-    private static String ARTIFACT_ID = "itorders";
-    private static String VERSION = "1.0.0";
+    private static String GROUP_ID = "${groupId}";
+    private static String ARTIFACT_ID = "${rootArtifactId}-kjar";
+    private static String VERSION = "${version}";
 
     protected static void installKJars() {
 
@@ -64,15 +64,15 @@ public class KieServerMain {
         LoginModule<?> loginModule = new LoginModule<>("UsersRoles");
         loginModule.flag(Flag.REQUIRED)
                 .code("UsersRoles")
-                .moduleOption("usersProperties", configFolder + "/security/application-users.properties")
-                .moduleOption("rolesProperties", configFolder + "/security/application-roles.properties");
+                .moduleOption("usersProperties", configFolder + "/security/users.properties")
+                .moduleOption("rolesProperties", configFolder + "/security/roles.properties");
 
         SecurityDomain<?> security = new SecurityDomain<>("other")
                 .classicAuthentication(new ClassicAuthentication<>()
                                                .loginModule(loginModule));
         container.fraction(new SecurityFraction().securityDomain(security));
 
-        JAXRSArchive deployment = ShrinkWrap.create(JAXRSArchive.class, "it-orders-web.war");
+        JAXRSArchive deployment = ShrinkWrap.create(JAXRSArchive.class, "${rootArtifactId}.war");
         deployment.staticContent();
         deployment.addAllDependencies();
 
@@ -134,6 +134,6 @@ public class KieServerMain {
 
         System.out.println("\tDeploying application ....");
         container.deploy(deployment);
-        System.out.println("\tSUCCESS :: IT Orders application ready!!!");
+        System.out.println("\tSUCCESS :: Application ready!!!");
     }
 }
