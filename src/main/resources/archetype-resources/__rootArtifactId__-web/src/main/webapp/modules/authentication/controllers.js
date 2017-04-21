@@ -15,7 +15,7 @@ angular.module('Authentication')
                 if (response.success) {
                     AuthenticationService.SetCredentials($scope.username, $scope.password);
                     $rootScope.kieServer = response.data;
-                    CasesService.GetDefinitions(function (response2) {
+                    CasesService.GetDefinitions(appConfig.get('kieserver_url'), function (response2) {
 
                         if (response2.success) {
                         	document.getElementById("app-body").removeAttribute('style');
